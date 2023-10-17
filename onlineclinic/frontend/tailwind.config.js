@@ -14,6 +14,7 @@ export default {
         headingColor:"181A1E",
         textColor: "#4E545F",
         primaryColor:"#3498DB",
+        redColor: "	#FF0000"
       },
       boxShadow:{
         panelShadow:"rgba(17,12,46,0.15) 0px 48px 100px 0px",

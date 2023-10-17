@@ -12,6 +12,7 @@ import {  Link } from "react-router-dom"
 import {BsArrowRight} from "react-icons/bs"
 import About from '../../components/about/About'
 import DoctorList from '../../components/doctors/DoctorList'
+import Testimonial from '../../components/testimonial/Testimonial'
 const Home = () => {
   return (
     <>
@@ -252,6 +253,7 @@ For Hypertension && Diabetes Treatments.
 For Hypertension && Diabetes Treatments.
   </p>
 </div>
+<Testimonial/>
       </div>
     </section>
     </>

@@ -1,6 +1,7 @@
 import React from 'react'
 import DoctorCard from '../../components/doctors/DoctorCard'
 import { doctors } from '../data/doctors'
+import Testimonial from '../../components/testimonial/Testimonial'
 const Doctors = () => {
   return (
     <>
@@ -29,6 +30,18 @@ focus:outline-none cursor-pointer placeholder:text-textColor ' placeholder='Sear
     </div>
     </div>
   </section>
+  <section>
+      <div className='container'>
+      <div className='xl:w-[470px] mx-auto'>
+  <h2 className='heading text-center'>what our patients say</h2>
+  <p className='text_para text-center'>
+  Consult an Online Doctor
+For Hypertension && Diabetes Treatments.
+  </p>
+</div>
+<Testimonial/>
+      </div>
+    </section>
   </>
   )
 }
