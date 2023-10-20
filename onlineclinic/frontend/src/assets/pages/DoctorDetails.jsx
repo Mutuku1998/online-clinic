@@ -1,6 +1,9 @@
 import React, { useState } from 'react';
 import staricon from "../../assets/images/Star.png";
 import doctorimg from "../../assets/images/doctor-img02.png";
+import DoctorAbout from '../../components/doctors/DoctorAbout';
+import Feedback from '../../components/doctors/Feedback';
+import SidePanel from '../../components/doctors/SidePanel';
 
 const DoctorDetails = () => {
   const [tab, setTab] = useState('about'); 
@@ -43,8 +46,20 @@ const DoctorDetails = () => {
                   Feedback
                 </button>
               </div>
+
+              <div className='mt-[50px]'>
+                {
+                  tab === 'about' && <DoctorAbout/>
+                }
+                     {
+                  tab === 'feedback' &&  <Feedback/>
+                }
+              </div>
+
             </div>
-            <div></div>
+            <div>
+              <SidePanel/>
+            </div>
           </div>
         </div>
       </section>

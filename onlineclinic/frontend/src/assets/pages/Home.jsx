@@ -236,8 +236,7 @@ Consultation
      <div className='xl:w-[470px] mx-auto'>
   <h2 className='heading text-center'>Our Great Physicians</h2>
   <p className='text_para text-center'>
-  Consult an Online Doctor
-For Hypertension && Diabetes Treatments.
+  Patients often return to these doctors for their care and professional advice
   </p>
 </div>
 <DoctorList/>
