@@ -30,7 +30,7 @@ text-headingColor font-[700] mt-3 lg:mt-5'> {name}</h2>
     <h3 className='text-[16px]leading-7 lg:text-[18px] lg:leading-[30px] font-semibold text-headingColor '>+{totalPatients} Patients</h3>
     <p className='text-[14px] leading-6 font-[400] text-textColor'>{hospital}</p>
 </div>
-<Link to='/doctors' className= "w-[44px] h-[44px] rounded-full border border-solid  border-[#181A1E] mt-[30px] mx-auto flex items-center justify-center group hover:bg-primaryColor"> 
+<Link to='/doctors/id' className= "w-[44px] h-[44px] rounded-full border border-solid  border-[#181A1E] mt-[30px] mx-auto flex items-center justify-center group hover:bg-primaryColor"> 
 <BsArrowRight className='group-hover:text-white w-6 h-5'/>
 </Link>
 </div>
