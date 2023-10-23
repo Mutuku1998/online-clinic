@@ -1,46 +1,49 @@
-import express from 'express';
-import dotenv from "dotenv";
+import express from "express";
 import cookieParser from "cookie-parser";
-import mongoose from 'mongoose';
+import mongoose from "mongoose";
 import cors from "cors";
-import authRoutes from "./Routes/auth.js"
+import dotenv from "dotenv";
+import authRoute from "./Routes/auth.js"
 
 dotenv.config();
+
 const app = express();
+const dbConnect = async ()=>{
 
-const port = process.env.PORT || 8080;
-
-const corsOptions = {
-    origin: true
-};
-
-//database connection
-
-const connectDb =  async()=>{
     try {
-        await mongoose.connect(process.env.DBURL,{
+     await mongoose.connect(process.env.DBURL, {
             useNewUrlParser:true,
-            useUnifiedTopology:true
-
+            useUnifiedTopology:true,
         })
-        console.log("database connected successfully")
+        console.log("mongodb connected ")
+        
     } catch (err) {
-        console.log("database not connected")
+        console.log("failed to connected")
+        
     }
 }
 
-app.get("/", (req, res) => {
-    res.send("Api is working");
-});
+const port = process.env.PORT || 8010
 
+const corsOptions = {
+    origin:true
+}
+
+app.get('/', (req,res)=>{
+    res.send("api is working")
+});
 //middleware
 app.use(express.json());
 app.use(cookieParser());
 app.use(cors(corsOptions));
-app.use('/api/v1/auth',authRoutes);
 
+app.use('/api/v1/auth', authRoute)
 
-app.listen(port, () => {
-    connectDb()
-    console.log(`Server is running on port ${port}`);
+app.listen(port,()=>{
+    dbConnect()
+    console.log("the server is running" + port)
 });
+
+
+
+

@@ -1,8 +1,8 @@
 import React from 'react'
 import heroImg01 from "../images/banner-18.png"
-import heroImg2 from "../images/hero-img02.png"
-import heroImg03 from "../images/hero-img03.png"
-import icon01 from "../images/hypertension.jpg"
+import heroImg2 from "../images/heart.jpeg"
+import heroImg03 from "../images/hypertension.jpg"
+import icon01 from "../images/hypertention-image.png"
 import icon03 from "../images/icon03.png"
 import icon02 from "../images/diabetes.jpg"
 import feature from '../images/feature.png'
@@ -66,8 +66,8 @@ const Home = () => {
 
   </div>
   <div className='mt-[30px]'> 
-    <img src={heroImg2} alt='' className='w-full mb-[30px]'/>
-    <img src ={heroImg03} alt=''className='w-full'/>
+    <img src={heroImg2} alt='' className='w-[200px] h-[200px] mb-[30px] rounded-[15px]'/>
+    <img src ={heroImg03} alt=''className='w-[200px] h-[200px] rounded-[15px]'/>
 
   </div>
 </div>
