@@ -6,6 +6,7 @@ import dotenv from "dotenv";
 import authRoute from "./Routes/auth.js"
 import userRoute from "./Routes/users.js"
 import doctorRoute from "./Routes/doctors.js"
+import reviewRoute from "./Routes/review.js"
 
 dotenv.config();
 
@@ -39,9 +40,10 @@ app.use(express.json());
 app.use(cookieParser());
 app.use(cors(corsOptions));
 
-app.use('/api/v1/auth', authRoute)
-app.use('/api/v1/users',userRoute)
-app.use('/api/v1/doctors',doctorRoute)
+app.use('/api/v1/auth', authRoute);
+app.use('/api/v1/users',userRoute);
+app.use('/api/v1/doctors',doctorRoute);
+app.use('/api/v1/reviews',reviewRoute);
 
 app.listen(port,()=>{
     dbConnect()
