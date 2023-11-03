@@ -22,7 +22,7 @@ const Login = () => {
 
     event.preventDefault()
   
-    setLoading(false)
+    setLoading(true)
   
     try {
       const res = await fetch(`http://localhost:8010/api/v1/auth/login`, {
